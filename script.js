@@ -48,12 +48,32 @@ function tampilkanOrderMenu() {
 
     orderItem.innerHTML = `
       <label for="menu-${index}">${item.nama}</label>
-      <input type="checkbox" id="menu-${index}" name="menu" value="${item.nama}">
-      <input type="number" id="qty-${index}" name="qty-${index}" min="1" value="1">
+      <input type="checkbox" id="menu-${index}" data-index="${index}">
+      <input type="number" id="qty-${index}" min="1" value="1" data-index="${index}">
     `;
 
     orderMenuContainer.appendChild(orderItem);
   });
+
+  // pasang event listener untuk checkbox & jumlah
+  document.querySelectorAll("#order-menu input").forEach(input => {
+    input.addEventListener("change", hitungTotal);
+  });
+}
+
+// hitung total harga
+function hitungTotal() {
+  let total = 0;
+  menu.forEach((item, index) => {
+    const checkbox = document.getElementById(`menu-${index}`);
+    const qty = document.getElementById(`qty-${index}`);
+    if (checkbox && checkbox.checked) {
+      total += item.harga * parseInt(qty.value || 1);
+    }
+  });
+
+  document.getElementById("total-harga").textContent = 
+    "Rp" + total.toLocaleString("id-ID");
 }
 
 document.addEventListener("DOMContentLoaded", () => {
