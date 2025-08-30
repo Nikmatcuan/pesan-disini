@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu Kue</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Bagian Daftar Menu -->
+  <section class="card">
+    <h2>Daftar Menu</h2>
+    <div id="daftar-menu"></div>
+  </section>
+
+  <!-- Bagian Pesan Sekarang -->
+  <section class="card">
+    <h2>Pesan Sekarang</h2>
+    <form id="order-form">
+      <input type="text" placeholder="Nama" required>
+      <input type="text" placeholder="Alamat" required>
+
+      <div id="order-menu"></div> <!-- 👈 checkbox + jumlah otomatis muncul di sini -->
+      
+      <button type="submit">Pesan</button>
+    </form>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
