@@ -88,3 +88,15 @@ button:hover {
   border-radius: 6px;
   text-align: center;
 }
+
+/* total harga */
+.total-container {
+  margin-top: 15px;
+  padding: 12px;
+  background: #f9f9f9;
+  border-radius: 8px;
+  font-size: 18px;
+  color: #333;
+  text-align: right;
+  border: 1px solid #ddd;
+}
