@@ -1,49 +1,41 @@
 body {
-  background: url('photo_2025-08-30_06-33-22.jpg') no-repeat center center fixed;
-  background-size: cover;
+  margin: 0;
   font-family: Arial, sans-serif;
+  background: url('photo_2025-08-30_06-33-22.jpg') no-repeat center center/cover;
 }
 
-body {
-  font-family: Arial, sans-serif;
-  background: #f5f5f5;
+.overlay {
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 15px;
   padding: 20px;
+  max-width: 500px;
+  margin: 20px auto;
 }
 
-.card {
-  background: #fff;
-  padding: 20px;
-  margin-bottom: 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+header {
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  margin: 20px;
+  padding: 15px;
+  border-radius: 15px;
 }
 
-h2 {
-  color: #5a3e1b;
-  margin-bottom: 15px;
+header h1 {
+  margin: 0;
+  color: #5a3212;
 }
 
-input[type="text"] {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 12px;
-  border-radius: 8px;
-  border: 1px solid #ddd;
+header .alamat {
+  margin: 5px 0;
+  font-size: 14px;
+  font-weight: bold;
+  color: #444;
 }
 
-button {
-  width: 100%;
-  padding: 12px;
-  background: #5a3e1b;
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-button:hover {
-  background: #7a5326;
+header p {
+  margin: 5px 0 0;
+  font-style: italic;
+  color: #333;
 }
 
 /* daftar menu */
