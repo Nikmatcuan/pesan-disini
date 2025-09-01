@@ -29,39 +29,6 @@
         <span id="total-harga">Rp0</span>
       </div>
 
-      <script>
-function kirimPesan() {
-  let pesan = "Halo, saya mau pesan:\n";
-  let total = 0;
-
-  document.querySelectorAll(".menu-item").forEach(item => {
-    let checkbox = item.querySelector("input[type='checkbox']");
-    let qty = parseInt(item.querySelector("input[type='number']").value) || 0;
-    let namaMenu = item.querySelector(".nama-menu").innerText;
-    let harga = parseInt(item.dataset.harga) || 0;
-
-    if (checkbox.checked && qty > 0) {
-      pesan += `- ${namaMenu} x${qty} = Rp${harga * qty}\n`;
-      total += harga * qty;
-    }
-  });
-
-  pesan += `\nTotal: Rp${total.toLocaleString()}`;
-  
-  // Nomor WA tujuan (ganti dengan nomor kamu, format internasional tanpa +)
-  let nomor = "6281234567890"; 
-
-  // Buat link WA
-  let url = `https://wa.me/${nomor}?text=${encodeURIComponent(pesan)}`;
-
-  // Redirect ke WhatsApp
-  window.open(url, "_blank");
-}
-</script>
-
-<button onclick="kirimPesan()">Pesan</button>
-
-
       <button type="submit">Pesan</button>
     </form>
   </section>
